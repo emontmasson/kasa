@@ -1,11 +1,14 @@
 
-
+import Banner from "../../components/Banner/Banner";
+import BannerImage from "../../assets/banner-about.png"
 
 function About() {
     return (
-        <div>
-            <h1>A propos</h1>
-        </div>
+
+        <section id="about">
+            <Banner image={BannerImage}  />
+        </section>
+
     )
 }
 

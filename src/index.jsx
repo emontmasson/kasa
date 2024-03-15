@@ -5,7 +5,7 @@ import LogementDetails from './pages/LogementDetails/LogementDetails';
 import About from './pages/About/About';
 import Header from "./components/Header/Header";
 import Error from "./pages/Error/Error"
-import './index.scss';
+import './sass/index.scss';
 
 import { createRoot } from 'react-dom/client';
 const container = document.getElementById('root');

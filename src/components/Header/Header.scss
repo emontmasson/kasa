@@ -1,3 +1,4 @@
+@import '../../sass/variables';
 
 nav {
   display: flex;
@@ -8,11 +9,14 @@ nav {
     justify-content: flex-end;
     a {
       font-weight: bold;
-      color: black;
+      color: $base-color;
       padding: 1vw;
       text-decoration: none;
-
+      &:active, &:hover {
+        text-decoration: underline;
+      }
     }
+
   }
 }
 

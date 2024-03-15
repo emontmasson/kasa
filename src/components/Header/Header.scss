@@ -2,17 +2,21 @@
 
 nav {
   display: flex;
+  img {
+    height: 68px;
+  }
   ul {
     display: flex;
     width: 100%;
     list-style: none;
     justify-content: flex-end;
     a {
-      font-weight: bold;
+
       color: $base-color;
       padding: 1vw;
       text-decoration: none;
-      &:active, &:hover {
+      font-weight: 600;
+      &.active, &:hover {
         text-decoration: underline;
       }
     }

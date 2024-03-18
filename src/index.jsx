@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './sass/_base.scss';
+import './index.scss';
 
 import Home from './pages/Home/Home';
 import LogementDetails from './pages/LogementDetails/LogementDetails';
@@ -9,7 +9,7 @@ import Header from "./components/Header/Header";
 import Error from "./pages/Error/Error"
 
 import Footer from "./components/Footer/Footer";
-import ImageFooter from './assets/footer.png';
+import ImageFooter from './assets/images/footer.png';
 
 import { createRoot } from 'react-dom/client';
 const container = document.getElementById('root');

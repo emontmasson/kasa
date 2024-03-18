@@ -1,6 +1,6 @@
 
 import Banner from "../../components/Banner/Banner";
-import BannerImage from "../../assets/banner-about.png"
+import BannerImage from "../../assets/images/banner-about.png"
 
 function About() {
     return (

@@ -2,7 +2,7 @@
 
 
 import Banner from "../../components/Banner/Banner";
-import BannerImage from "../../assets/banner-index.png"
+import BannerImage from "../../assets/images/banner-index.png"
 
 
 function Home() {

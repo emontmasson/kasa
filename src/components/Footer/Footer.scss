@@ -1,0 +1,14 @@
+@import '../../sass/variables';
+
+
+#footer {
+  background-color: $base-color;
+  color: $invert-base-color;
+  padding: 2vh;
+  text-align: center;
+  max-width: none;
+  img {
+    padding:4vh;
+  }
+
+}

@@ -8,9 +8,9 @@ import BannerImage from "../../assets/banner-index.png"
 function Home() {
   return (
 
-      <section id="accueil">
+      <main>
           <Banner image={BannerImage} title="Chez vous, partout et ailleurs" />
-      </section>
+      </main>
   )
 }
 

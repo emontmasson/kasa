@@ -5,9 +5,9 @@ import BannerImage from "../../assets/banner-about.png"
 function About() {
     return (
 
-        <section id="about">
+        <main>
             <Banner image={BannerImage}  />
-        </section>
+        </main>
 
     )
 }

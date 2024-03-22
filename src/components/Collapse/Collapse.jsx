@@ -1,6 +1,6 @@
 import './Collapse.scss';
 
-import { useEffect,useState } from 'react';
+import { useState } from 'react';
 
 function Collapse({ title,  content }) {
 
@@ -10,7 +10,7 @@ function Collapse({ title,  content }) {
     // onClick, on met à jour l'état à l'inverse de ce qu'il est, soit true ou false
     // className, on détermine les classes css à mettre selon l'état de isOpen
     return (
-        <div>
+        <div id="collapse">
             <button type="button" onClick={() => setIsOpen(!isOpen)} className="collapsible arrow">{title}<i className={"arrow " + (isOpen ? "down" : "up")}></i></button>
             <div className={"content " + (isOpen ? "display" : "")}>
                 <p>{content}</p>

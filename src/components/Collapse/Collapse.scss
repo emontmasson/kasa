@@ -1,50 +1,55 @@
 @import '../../assets/scss/global';
+#collapse {
+  margin-top: 10px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  .collapsible {
+    background-color: $red-color;
+    color: $invert-base-color;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display:flex;
+    justify-content: space-between;
 
-.collapsible {
-  background-color: $red-color;
-  color: $invert-base-color;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 20px;
-  font-weight: bold;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  display:flex;
-  justify-content: space-between;
+    .arrow {
+      border: solid $invert-base-color;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 6px;
+      transition: transform 0.5s;
+      &.down {
+        transform: rotate(45deg);
+      }
+      &.up {
+        transform: rotate(-135deg);
+        margin-top: 10px;
+      }
+    }
+  }
 
-  .arrow {
-    border: solid $invert-base-color;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 6px;
-    transition: transform 0.5s;
-    &.down {
-      transform: rotate(45deg);
+  .content {
+    padding: 20px;
+    height: 0;
+    background-color: $grey-color;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.26s ease;
+    &.display {
+      transform: scaleY(1);
+      height: auto;
     }
-    &.up {
-      transform: rotate(-135deg);
-    }
+
   }
 }
 
-
-
-.content {
-  padding: 20px;
-  height: 0;
-  background-color: $grey-color;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.26s ease;
-  &.display {
-    transform: scaleY(1);
-    height: auto;
-  }
-
-}
 
 

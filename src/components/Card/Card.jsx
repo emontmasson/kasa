@@ -10,12 +10,7 @@ function Card({ label,  picture }) {
     )
 }
 
-/* typage des propriétés avec champs obligatoires */
-Card.propTypes = {
-    label: PropTypes.string,
 
-    picture: PropTypes.string,
-}
 
 
 export default Card

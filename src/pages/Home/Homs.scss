@@ -1,0 +1,12 @@
+@import '../../assets/scss/global';
+
+#home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: $grey-color;
+  @include br-15;
+  padding: 25px 0;
+
+}

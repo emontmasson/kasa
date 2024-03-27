@@ -1,16 +1,17 @@
+import "./Card.scss";
+import { Link } from "react-router-dom";
 
-import PropTypes from 'prop-types'
-function Card({ label,  picture }) {
+function Card({ id, title,  picture}) {
+
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', padding: 15 }}>
-            <span>{label}</span>
-            <img src={picture} alt="freelance" height={80} width={80} />
-
-        </div>
+        <Link to={`/fiches/${id}`}>
+            <figure className="card">
+                    <img src={picture} alt={title} />
+                    <figcaption className="title">{title}</figcaption>
+            </figure>
+        </Link>
     )
 }
-
-
 
 
 export default Card

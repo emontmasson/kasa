@@ -1,0 +1,36 @@
+@import '../../assets/scss/global';
+
+figure.card {
+  position:relative;
+  @include br-15;
+
+  margin: 1vw;
+  height: 340px;
+  width: 335px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.30);
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.45);
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 340px;
+    @include br-15;
+  }
+  figcaption {
+    width: 315px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: bold;
+    padding: 10px;
+    height: 52px;
+    position: absolute;
+    bottom:0;
+    color: $invert-base-color;
+    background-color: $dark-grey-color;
+    font-size: 0.938rem;
+
+
+  }
+}

@@ -1,6 +1,6 @@
 import {  useLocation } from 'react-router-dom'
 
-
+import './LogementsDetails.scss';
 import React from "react";
 
 function LogementDetails() {
@@ -25,11 +25,11 @@ function LogementDetails() {
 
     // Utilisez les données du logement trouvé
     return (
-        <div>
-            <h1>Logement {data.id}</h1>
-            <h2>{data.title}</h2>
+        <main>
+            <h1>{data.title}</h1>
+            <p>{data.location}</p>
             {/* Affichez les autres détails du logement ici */}
-        </div>
+        </main>
     );
 }
 

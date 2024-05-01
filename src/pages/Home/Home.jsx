@@ -5,14 +5,14 @@ import Banner from "../../components/Banner/Banner";
 import BannerImage from "../../assets/images/banner-index.png"
 import Card from "../../components/Card/Card";
 
-import "./Homs.scss";
+import "./Home.scss";
 
 import useDataFetching from "../../components/UseDataFetching/UseDataFetching";
 
 
 function Home() {
 
-    const { data, isLoading, error } = useDataFetching('./data/logements.json');
+    const { data, isLoading, error } = useDataFetching('/data/logements.json');
 
     // Si une erreur survient, affichez le message d'erreur
     if (error) {
@@ -30,7 +30,7 @@ function Home() {
             <Banner image={BannerImage} title="Chez vous, partout et ailleurs" />
             <section id="home">
                 {data && data.length>0 && data.map((housting) => (
-                    <Card key={housting.id} id={housting.id} title={housting.title} picture={housting.cover} />
+                    <Card key={housting.id} data={housting} />
                 ))}
             </section>
         </main>

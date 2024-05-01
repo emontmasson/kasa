@@ -2,41 +2,30 @@
 import Banner from "../../components/Banner/Banner";
 import BannerImage from "../../assets/images/banner-about.png"
 import Collapse from "../../components/Collapse/Collapse";
-import { useEffect,useState } from 'react';
+import React from 'react';
+import UseDataFetching from "../../components/UseDataFetching/UseDataFetching";
 
 
 function About() {
-    // récupération des données du fichiers json
-    const getDataAbout=()=>{
-        fetch('/data/about.json'
-            ,{
-                headers : {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        )
-            .then(function(response){
-                console.log(response)
-                return response.json();
-            })
-            .then(function(aboutJson) {
-                console.log(aboutJson);
-                setData(aboutJson)
-            });
-    }
-    useEffect(()=>{
-        getDataAbout()
-    },[])
 
-    const [dataAbout,setData]=useState([]);
+    const { data, isLoading, error } = UseDataFetching('./data/about.json');
+
+    // Si une erreur survient, affichez le message d'erreur
+    if (error) {
+        return <div>Il y a eu une erreur lors du chargement des données</div>;
+    }
+
+    // Si les données sont encore en cours de chargement, affichez un message de chargement
+    if (isLoading) {
+        return <div>Chargement...</div>;
+    }
 
     return (
 
         <main>
             <Banner image={BannerImage}  />
             {
-                dataAbout && dataAbout.length>0 && dataAbout.map((info)=><Collapse title={info.title} content={info.content} />)
+                data && data.length>0 && data.map((info)=><Collapse title={info.title} content={info.content} />)
             }
 
         </main>

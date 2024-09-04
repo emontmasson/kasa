@@ -6,6 +6,7 @@ import React from 'react';
 import UseDataFetching from "../../components/UseDataFetching/UseDataFetching";
 
 
+
 function About() {
 
     const { data, isLoading, error } = UseDataFetching('./data/about.json');

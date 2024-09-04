@@ -7,8 +7,7 @@ function Card({data} ) {
     const jsonData = JSON.stringify(data);
     return (
         <Link to={{
-            pathname: `/logement/${data.id}`,
-            search: `?data=${encodeURIComponent(jsonData)}`
+            pathname: `/logement/${data.id}`
         }}>
             <figure className="card">
 

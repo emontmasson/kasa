@@ -1,7 +1,29 @@
 @import '../../assets/scss/global';
 
 h1 {
-  color: #FF6060;
+  color: $red-color;
   font-size: 36px;
   font-weight: 500;
 }
+
+h2 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+span.tag {
+  margin-right: 10px;
+}
+
+#detailsLogement  {
+  display: flex;
+  .collapse {
+
+    width: 47%;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+

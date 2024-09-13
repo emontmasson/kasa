@@ -1,29 +1,51 @@
 @import '../../assets/scss/global';
+#logementDetailsMain {
+  h1 {
+    color: $red-color;
+    font-size: 2.5vw;
+    font-weight: 500;
+  }
 
-h1 {
-  color: $red-color;
-  font-size: 36px;
-  font-weight: 500;
-}
+  h2 {
+    font-weight: 500;
+    font-size: 18px;
+  }
 
-h2 {
-  font-weight: 500;
-  font-size: 18px;
-}
+  span.tag {
+    margin-right: 10px;
+  }
 
-span.tag {
-  margin-right: 10px;
-}
+  #detailsLogement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 
-#detailsLogement  {
-  display: flex;
-  .collapse {
+    .collapse {
+      margin-left: 0;
+      margin-right: 0;
+      width: 47%;
 
-    width: 47%;
-    li {
-      list-style: none;
+      li {
+        list-style: none;
+      }
+    }
+  }
+  .stickers {
+    @include flex-center;
+    .star-rating {
+      margin-left: auto; /* Pousse le conteneur .star-rating à droite */
+    }
+  }
+  .partieHaute {
+    @include flex-center;
+    align-items: center;
+    margin-top: 20px;
+    .profile-picture {
+      margin-left: auto;
     }
   }
 }
+
 
 

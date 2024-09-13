@@ -1,0 +1,42 @@
+.carroussel {
+  display: flex;
+
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+
+  img {
+    width: 100%; /* L'image prend toute la largeur disponible */
+    height: auto; /* Conserve les proportions de l'image */
+    max-height: 415px; /* Hauteur maximale */
+    object-fit: cover; /* Recadre l'image si elle dépasse les dimensions */
+  }
+  .countImage {
+    position: absolute;
+    bottom: 15px;
+    color:white;
+
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color:white;
+    cursor: pointer;
+  }
+
+  .prev-button {
+    left: 10px;
+  }
+
+  .next-button {
+    right: 10px;
+  }
+
+
+}
+

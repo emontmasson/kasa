@@ -4,6 +4,13 @@
   max-width: 1240px;
 }
 
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Assure que le conteneur occupe toute la largeur disponible */
+  margin-bottom: 20px;
+}
+
 @mixin br-15 {
   border-radius: 15px;
 }

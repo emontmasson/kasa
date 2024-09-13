@@ -1,0 +1,19 @@
+@import '../../assets/scss/global';
+
+.star-rating {
+  display: flex;
+  gap: 8px; /* Espace entre les étoiles */
+  font-size: 1em;
+  .star {
+    transition: color 0.2s;
+  }
+
+  .orange {
+    color: $red-color;
+  }
+
+  .gray {
+    color: $grey-strong-color;
+  }
+}
+

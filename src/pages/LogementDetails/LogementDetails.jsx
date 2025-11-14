@@ -9,13 +9,14 @@ import useDataFetching from "../../components/UseDataFetching/UseDataFetching";
 import Carroussel from "../../components/Carroussel/Carroussel";
 import StarRating from "../../components/StarRating/StarRating";
 import Profile from "../../components/Profile/Profile";
+import { useNavigate } from "react-router-dom";
 
 
 function LogementDetails() {
 
     const param = useParams();
+    const navigate = useNavigate();
 
-    
     const { data, isLoading, error } = useDataFetching('/data/logements.json');
 
     // Si une erreur survient, affichez le message d'erreur
@@ -28,7 +29,9 @@ function LogementDetails() {
         return <div>Chargement...</div>;
     }
     let logement = data.find((logementData) => logementData.id === param.idLogement);
-
+    if(logement === null || logement === undefined) {
+        navigate("*")
+    }
 
 
     // Utilisez les données du logement trouvé

@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import LogementDetails from './pages/LogementDetails/LogementDetails';
 import About from './pages/About/About';
-import Header from "./components/Header/Header";
 import Error from "./pages/Error/Error"
 
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ImageFooter from './assets/images/footer.png';
 

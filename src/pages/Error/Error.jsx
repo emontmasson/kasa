@@ -1,8 +1,11 @@
+import "./Error.scss";
+
 function Error() {
     return (
-        <div>
-            <h1>Oups 🙈 Cette page n'existe pas</h1>
-        </div>
+        <main>
+            <h1>404</h1>
+            <h2>Oups 🙈 Cette page n'existe pas</h2>
+        </main>
     )
 }
 
